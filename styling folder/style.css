@@ -1,0 +1,129 @@
+img.pic1 {
+            display: inline-block;
+            margin-top: 0px;
+            margin-left: 0px;
+            margin-right: 40px;
+            margin-bottom: 10px;
+            width: 150px;
+            height: 150px;
+            border-radius:60px;
+            border: 2px solid whitesmoke;
+
+}
+img.pic2 {
+            display: inline-block;
+            margin-top: 0px;
+            margin-left: 0px;
+            margin-right: 40px;
+            margin-bottom: 10px;
+            width: 150px;
+            height: 150px;
+            border-radius:60px;
+            border: 2px solid whitesmoke;
+
+}
+img.pic3 {
+            display: inline-block;
+            margin-top: 0px;
+            margin-left: 0px;
+            margin-right: 40px;
+            margin-bottom: 10px;
+            width: 150px;
+            height: 150px;
+            border-radius:60px;
+            border: 2px solid whitesmoke;
+
+}
+img:hover {
+            transform: scale(1.1);
+            transition: ease-in-out 0.3s;
+            box-shadow: 0 9px 90px rgba(0, 0, 0, 0.2);
+}
+p.username {
+            font-weight: bold;
+            font: normal 700px Arial, Helvetica, sans-serif;
+            font-size: 19px;
+            color: rgb(12, 2, 2);
+            text-align: left;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            margin-left: 10px;
+            margin-right: 1220px;
+            
+            border-radius: 50px;
+
+            border-color: rgb(206, 16, 16);
+            border-style: l;
+            border-width: 3px;
+            box-sizing: border-box;
+            padding: 10px;
+            box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+            
+}
+p.username:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+
+}
+p.words1 {
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 15px;
+            border: 1px solid #080404;
+            box-sizing: border-box;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: 0px;
+            margin-right: 1350px;
+            border-radius: 50px;
+            padding: 10px;
+            box-shadow: 0 3px 20px rgba(255, 5, 238, 0.614);
+            text-align: left;
+        }
+p.words2 {
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 15px;
+            border: 1px solid #080404;
+            box-sizing: border-box;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: 0px;
+            margin-right: 1350px;
+            border-radius: 50px;
+            padding: 10px;
+            box-shadow: 0 3px 20px rgba(255, 171, 3, 0.981);
+            text-align: left;
+        }
+p.words3 {
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 15px;
+            border: 1px solid #080404;
+            box-sizing: border-box;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: 0px;
+            margin-right: 1350px;
+            border-radius: 50px;
+            padding: 10px;
+            box-shadow: 0 3px 20px rgba(4, 190, 232, 0.622);
+            text-align: left;
+        }
+p.words4 {
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 15px;
+            border: 1px solid #080404;
+            box-sizing: border-box;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: 0px;
+            margin-right: 1330px;
+            border-radius: 50px;
+            padding: 10px;
+            box-shadow: 0 3px 20px rgba(223, 7, 158, 0.2);
+            text-align: left;
+        }
+p.words1,words2,words3,words4:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+
+}
+</style>
