@@ -1,3 +1,4 @@
+
 img.pic1 {
             display: inline-block;
             margin-top: 0px;
@@ -40,9 +41,9 @@ img:hover {
             box-shadow: 0 9px 90px rgba(0, 0, 0, 0.2);
 }
 p.username {
-            font-weight: bold;
-            font: normal 700px Arial, Helvetica, sans-serif;
-            font-size: 19px;
+            
+            font: normal  Arial, Helvetica, sans-serif;
+            font-size: 20px;
             color: rgb(12, 2, 2);
             text-align: left;
             margin-top: 30px;
@@ -50,7 +51,7 @@ p.username {
             margin-left: 10px;
             margin-right: 1220px;
             
-            border-radius: 50px;
+            border-radius: 50px; /* rounded corners */
 
             border-color: rgb(206, 16, 16);
             border-style: l;
@@ -63,67 +64,126 @@ p.username {
 p.username:hover {
             transform: scale(1.05);
             transition: transform 0.3s ease;
-
 }
-p.words1 {
-            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            font-size: 15px;
-            border: 1px solid #080404;
-            box-sizing: border-box;
-            margin-top: 10px;
-            margin-bottom: 10px;
-            margin-left: 0px;
-            margin-right: 1350px;
-            border-radius: 50px;
-            padding: 10px;
-            box-shadow: 0 3px 20px rgba(255, 5, 238, 0.614);
-            text-align: left;
-        }
-p.words2 {
-            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            font-size: 15px;
-            border: 1px solid #080404;
-            box-sizing: border-box;
-            margin-top: 10px;
-            margin-bottom: 10px;
-            margin-left: 0px;
-            margin-right: 1350px;
-            border-radius: 50px;
-            padding: 10px;
-            box-shadow: 0 3px 20px rgba(255, 171, 3, 0.981);
-            text-align: left;
-        }
-p.words3 {
-            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            font-size: 15px;
-            border: 1px solid #080404;
-            box-sizing: border-box;
-            margin-top: 10px;
-            margin-bottom: 10px;
-            margin-left: 0px;
-            margin-right: 1350px;
-            border-radius: 50px;
-            padding: 10px;
-            box-shadow: 0 3px 20px rgba(4, 190, 232, 0.622);
-            text-align: left;
-        }
-p.words4 {
-            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            font-size: 15px;
-            border: 1px solid #080404;
-            box-sizing: border-box;
-            margin-top: 10px;
-            margin-bottom: 10px;
-            margin-left: 0px;
-            margin-right: 1330px;
-            border-radius: 50px;
-            padding: 10px;
-            box-shadow: 0 3px 20px rgba(223, 7, 158, 0.2);
-            text-align: left;
-        }
-p.words1,words2,words3,words4:hover {
-            transform: scale(1.05);
-            transition: transform 0.3s ease;
+.box-container{
+    display:flex;
+    /*flex-direction: column;  default is row  makes the flex box container line up or be in colums*/ 
+    justify-content: space-between; /* space-evenly, space-between, center, flex-start, flex-end. adjusts the    */
+    /*align-items: flex-start; /* center, flex-start, flex-end, stretch  if its colums align-items has more power*/
+    flex-wrap: wrap; /* wrap, nowrap, wrap-reverse.  makes the flex box container line up or be in colums*/
+    /* gap;; /* adds space between the flex items */
+    /*flex-basis: 100px; /* sets the width of the flex items */
+
+    height: 100px;
+    width: 840px;
+
+   /* margin: 10px;*/
+}
+.box1 {
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+    background-color: var(--bg-color, #ffffff);
+    color: var(--text-color, #04f659);
+    transform: translateX(1vw);
+    animation: boxAnimation 0.5s ease-in-out infinite alternate;; 
+    height: 20px;
+    width: auto;
+    /*flex-grow: 1; /* allows the box to grow and fill the available space */
+    /*flex-shrink: 0; /* allows the box to shrink if there is not enough space */
+    /* flex-basis: 1110px; /* sets the width of the flex items */
+    /*flex: 1; /* shorthand for flex-grow, flex-shrink, and flex-basis */
+    /*align-self: center; /* aligns the item to the start of the flex container */
+    /*order: 1; /* sets the order of the item in the flex container */
+}
+@keyframes boxAnimation {
+    to {/* keyframes for the animation */
+        transform: translateX(-1vw) rotate: -10deg;
+        scale: 1.09; /* scale the box to 1.09 times its original size */
+        /*translateX(1vw);  move the box to the right by 1vw */
+        /*rotate: -10deg;  rotate the box by -10 degrees */
+
+    
+    }
+}
+.box2 {
+    border: 0px solid rgb(206, 16, 16);
+    height: 20px;
+    width: 150px;
+    background-color: var(--bg-color, #ffffff);
+    color: var(--text-color, #04f659);
+
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow:  1px 5px 20px rgba(0, 0, 0, 0.2);
+
+   /* transition-property: transform;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+    transition-delay: 0s; */
+
+    transition: transform 1s ease, background-color 1s linear, scale 1s ease;
+
+    /*flex-grow: 1; /* allows the box to grow and fill the available space */
+    /*flex-shrink: 0; /* allows the box to shrink if there is not enough space */
+    /*flex-basis: ; sets the width of the flex items */
+}
+.box3 {
+    height: 20px;
+    width: 150px;
+    background-color: var(--bg-color, #ffffff); /* background color of the box */
+    color: var(--text-color, #04f659); /* text color of the box */
+    padding: 10px; /* padding inside the box */
+    border: 5px solid rgb(91, 239, 65); /* border of the box */
+    border-radius: 10px; /* rounded corners */
+    box-shadow:  1px 5px 20px rgba(0, 0, 0, 0.2); /* box shadow for the box */
+
+    animation: boxAnimation2 5s ease-in-out infinite; /* animation for the box */
+    
+   /* animation-name: boxAnimation2; /* name of the animation  
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    /*animation-direction: alternate;  makes the animation alternate between forward and backward */
+    /*animation-fill-mode: both;*/
+   /* animation-play-state: paused;  makes the animation run */ 
+
+} 
+@keyframes boxAnimation2 {
+    0% {
+        transform: rotateX(0deg) rotateY(0deg); /* initial position and rotation */
+        rotateZ(0deg);
+    } 
+    25% {
+        transform: rotateX(60deg) rotateY(60deg);
+        rotateZ(30deg);
+    }
+    50% {
+        transform: rotateX(120deg) rotateY(120deg);
+        rotateZ(120deg);
+        /* middle position and rotation */
+        /*rotateZ(360deg);  rotate the box by 360 degrees */
+    }
+    75% {
+        transform: rotateX(180deg) rotateY(180deg);
+        rotateZ(180deg);
+    }
+    100% {
+        transform: rotateX(360deg) rotateY(360deg); /* final position and rotation */
+        rotateZ(0deg);
+    }
+}
+.box3:hover {
+    transform: t
+}
+
+
+
+.box2:hover {
+    transform: rotate(360deg);
+    background-color: rgb(16, 168, 206);
+    scale: 2;
 
 }
 </style>
