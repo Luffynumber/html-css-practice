@@ -98,7 +98,7 @@ p.username:hover {
 }
 @keyframes boxAnimation {
     to {/* keyframes for the animation */
-        transform: translateX(-1vw) rotate: -10deg;
+        transform: translateX(-1vw) rotateX(-10deg);
         scale: 1.09; /* scale the box to 1.09 times its original size */
         /*translateX(1vw);  move the box to the right by 1vw */
         /*rotate: -10deg;  rotate the box by -10 degrees */
@@ -152,25 +152,25 @@ p.username:hover {
 } 
 @keyframes boxAnimation2 {
     0% {
-        transform: rotateX(0deg) rotateY(0deg); /* initial position and rotation */
+        transform: rotateX(0deg) rotateY(0deg) /* initial position and rotation */
         rotateZ(0deg);
     } 
     25% {
-        transform: rotateX(60deg) rotateY(60deg);
+        transform: rotateX(60deg) rotateY(60deg)
         rotateZ(30deg);
     }
     50% {
-        transform: rotateX(120deg) rotateY(120deg);
+        transform: rotateX(120deg) rotateY(120deg)
         rotateZ(120deg);
         /* middle position and rotation */
         /*rotateZ(360deg);  rotate the box by 360 degrees */
     }
     75% {
-        transform: rotateX(180deg) rotateY(180deg);
+        transform: rotateX(180deg) rotateY(180deg)
         rotateZ(180deg);
     }
     100% {
-        transform: rotateX(360deg) rotateY(360deg); /* final position and rotation */
+        transform: rotateX(360deg) rotateY(360deg) /* final position and rotation */
         rotateZ(0deg);
     }
 }
@@ -186,4 +186,3 @@ p.username:hover {
     scale: 2;
 
 }
-</style>
