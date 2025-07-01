@@ -1,45 +1,69 @@
+body {
+    background-color: rgb(194, 215, 213); /* sets the background color of the body */
+    font-family: Arial, Helvetica, sans-serif; /* sets the font family of the body */
+    margin: 0; /* removes the default margin of the body */
+    padding: 0; /* removes the default padding of the body */
+    align-items: center; /* centers the items horizontally */
+    justify-content: center; /* centers the items vertically */
+}
 
-img.pic1 {
-            display: inline-block;
-            margin-top: 0px;
-            margin-left: 0px;
-            margin-right: 40px;
-            margin-bottom: 10px;
+
+
+.image-container {
+        /*display flex /* makes the image container a flex container */
+        /*flex-direction /* sets the direction of the flex container to column */
+        /* justify-content: start; /* aligns the images to the start of the flex container */
+        gap: 10px;;
+        margin-inline: auto; /* centers the image container horizontally */
+        position: relative; /* positions the image container relative to its parent */
+        margin-top: 5rem; /* sets the top margin of the image container */
+        overflow: hidden;
+        /*flex-wrap: wrap; /* allows the images to wrap to the next line if there is not enough space */
+        max-width: 1536px; /* sets the maximum width of the image container */
+        border-radius: 500px;
+        height: 150px;/* sets the height of the image container */
+        background: linear-gradient(to right, #c4d5d3,  #c4d5d3); /* background color of the image container */
+        box-shadow: #c4d5d3; 
+        /*border: 5px solid #fcfcfc; /* border color of the image container */
+}
+@keyframes scrollingleft {
+    to {
+        left: -200px; /* moves the image container to the left */
+    }
+}
+
+@keyframes scrolling {
+    0% {
+        transform: translateX(0%); /* initial position */
+    }
+    90% {
+        transform: translateX(-500%); /* final position */
+    }
+    100% {
+        transform: translateX(0%); /* reset to initial position */
+    }
+}   
+img {
+            display: flex; /* makes the image container a flex container */
+            justify-content: center; /* centers the images horizontally */
+            align-items: center; /* centers the images vertically */
+            flex-wrap: wrap; /* prevents the images from wrapping to the next line */
+            gap: 15px;
             width: 150px;
             height: 150px;
-            border-radius:60px;
-            border: 2px solid whitesmoke;
+            border-radius:600px;
+            border: 5px solid linear-gradient(to right, #f2f0f0,  #0713ef); /* border color of the image */
+            position: absolute; /* positions the image relative to its parent */
+            left: 100%; /* positions the image to the right of the image container */
+            animation: scrollingleft 11s infinite linear; /* makes the image scroll to the left */
+            animation-delay: 15s;
+            /* animation: scrollingleft;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear; /* makes the animation smooth */
+}
 
-}
-img.pic2 {
-            display: inline-block;
-            margin-top: 0px;
-            margin-left: 0px;
-            margin-right: 40px;
-            margin-bottom: 10px;
-            width: 150px;
-            height: 150px;
-            border-radius:60px;
-            border: 2px solid whitesmoke;
 
-}
-img.pic3 {
-            display: inline-block;
-            margin-top: 0px;
-            margin-left: 0px;
-            margin-right: 40px;
-            margin-bottom: 10px;
-            width: 150px;
-            height: 150px;
-            border-radius:60px;
-            border: 2px solid whitesmoke;
-
-}
-img:hover {
-            transform: scale(1.1);
-            transition: ease-in-out 0.3s;
-            box-shadow: 0 9px 90px rgba(0, 0, 0, 0.2);
-}
 p.username {
             
             font: normal  Arial, Helvetica, sans-serif;
@@ -50,9 +74,9 @@ p.username {
             margin-bottom: 30px;
             margin-left: 10px;
             margin-right: 1220px;
-            
-            border-radius: 50px; /* rounded corners */
 
+            justify-self: flex-start;/* aligns the text to the start of the flex container */
+            border-radius: 50px; /* rounded corners */
             border-color: rgb(206, 16, 16);
             border-style: l;
             border-width: 3px;
@@ -76,7 +100,6 @@ p.username:hover {
 
     height: 100px;
     width: 840px;
-
    /* margin: 10px;*/
 }
 .box1 {
@@ -150,6 +173,38 @@ p.username:hover {
    /* animation-play-state: paused;  makes the animation run */ 
 
 } 
+.box4 {
+    padding: 3em 3em; /* top-bottom left-right adjustments (em) is the short-hand version 1em is for the top and right lengths and the second em is for the bottom and left side lengths*/
+    font-weight: 600; /* changes the font weight/boldness max: 1000*/
+    border: none; /*removes the default border around the button*/
+    border-radius: 90px; /*rounds th ecorners of the box*/
+    overflow: hidden;
+    color: #ffffff; /*the texts color*/
+    background: linear-gradient(to right, #ffffff, rgb(255, 0, 0));
+    position: relative; /* allows the position:absolute; to be positioned/start at the realitive position of the box4*/
+    z-index: 0; /*sets the stacking order (this box4 will sit below anything higher than 0)*/
+    cursor: pointer;
+}
+.box4::after{
+    content:'';
+    background: linear-gradient(to right, rgb(252, 0, 0), rgb(183, 0, 255));
+    overflow: hidden;
+    height: 100%; /* used to position/height the after effects height with box4 */
+    width: 0%; /* initially zero width -- to hide the after effect and in the hover section itll have width 100% */
+    border-radius: 2px;/* used to match the shape of the button so it blends in smoothly*/
+    position: absolute;
+    left: 0;/*inital starting point of the change effect from the left side*/
+    top: 0; /*keeps the initial change effect balanced*/
+    z-index: -1; /* due to the stacking order made in .b0x4 allows the after effect in this section to appear BEHIND the initial usualyy 0 and -1*/
+    transition: 1s ease-in-out;
+}
+.box4:hover::after{
+    width: 100%; /* this is the completion rate of the box::after color change*/
+}
+
+.box4:hover::before {
+    color:rgb(255, 255, 255);
+}
 @keyframes boxAnimation2 {
     0% {
         transform: rotateX(0deg) rotateY(0deg) /* initial position and rotation */
@@ -174,8 +229,10 @@ p.username:hover {
         rotateZ(0deg);
     }
 }
-.box3:hover {
-    transform: t
+img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
 }
 
 
@@ -185,4 +242,39 @@ p.username:hover {
     background-color: rgb(16, 168, 206);
     scale: 2;
 
+}
+
+.pic1 {
+    animation-delay: 1s;/* calc(30s / 8 * (8 - 1) * -1);*/
+}
+.pic2 {
+    animation-delay: 2s; /*calc(30s / 8 * (8 - 2) * -1);*/
+}
+.pic3 {
+    animation-delay: 3s; /*calc(30s / 8 * (8 - 3) * -1);*/
+}
+.pic4 {
+    animation-delay: 4s; /*calc(30s / 8 * (8 - 4) * -1);*/
+}
+
+.pic5 {
+    animation-delay: 5s; /*calc(30s / 8 * (8 - 5) * -1);*/
+}
+.pic6 {
+    animation-delay: 6s; /* calc(30s / 8 * (8 - 6) * -1);*/
+}
+.pic7 {
+    animation-delay: 7s; /* calc(30s / 8 * (8 - 7) * -1);*/
+}
+.pic8 {
+    animation-delay: 8s; /*calc(30s / 8 * (8 - 8) * -1); */
+}
+.pic9 {
+    animation-delay: 9s;/* calc(30s / 8 * (8 - 9) * -1); */
+}
+.pic10 {
+    animation-delay: 10s; /*calc(30s / 8 * (8 - 10) * -1); */
+}
+.pic11 {
+    animation-delay: 11s; /*calc(30s / 8 * (8 - 11) * -1);*/
 }
