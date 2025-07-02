@@ -1,4 +1,7 @@
-function SayHello() {
-    alert('You clicked the BUTTON!');
+var button = document.querySelector('button');
+var rock = document.getElementById("ChangeMe");
+
+function changeColor(){
+    Box.style.background = "blue";
 }
-console.log('Hello, world!'); // This is a comment
+
