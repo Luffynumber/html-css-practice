@@ -5,26 +5,33 @@ body {
     padding: 0; /* removes the default padding of the body */
     align-items: center; /* centers the items horizontally */
     justify-content: center; /* centers the items vertically */
+
+    transition: background-image 1s ease-in-out;
+    background-size: cover;
+    background-position: center;
+    z-index: -2;
 }
 
 
 
 .image-container {
-        /*display flex /* makes the image container a flex container */
-        /*flex-direction /* sets the direction of the flex container to column */
-        /* justify-content: start; /* aligns the images to the start of the flex container */
-        gap: 10px;;
+        display: flex; /* makes the image container a flex container */
+        flex-direction:row; /* sets the direction of the flex container to column */
+        justify-content: center; /* aligns the images to the start of the flex container */
+        gap: 10px;
+        align-items: center; /*This ones THIS ONE CENTERS THE IMAGES */
+
         margin-inline: auto; /* centers the image container horizontally */
         position: relative; /* positions the image container relative to its parent */
-        margin-top: 5rem; /* sets the top margin of the image container */
+        margin-top: 1rem; /* sets the top margin of the image container */
         overflow: hidden;
         /*flex-wrap: wrap; /* allows the images to wrap to the next line if there is not enough space */
         max-width: 1536px; /* sets the maximum width of the image container */
-        border-radius: 500px;
-        height: 150px;/* sets the height of the image container */
-        background: linear-gradient(to right, #c4d5d3,  #c4d5d3); /* background color of the image container */
-        box-shadow: #c4d5d3; 
-        /*border: 5px solid #fcfcfc; /* border color of the image container */
+        border-radius: 600px;
+        height: 160px;/* sets the height of the image container */
+       /* background: linear-gradient(to right, #e3eaea,  #b5c0bf); /* background color of the image container */
+        box-shadow: 1px 10px 20px black
+       /* border: 5px solid #fcfcfc; /* border color of the image container */
 }
 @keyframes scrollingleft {
     to {
@@ -49,14 +56,15 @@ img {
             align-items: center; /* centers the images vertically */
             flex-wrap: wrap; /* prevents the images from wrapping to the next line */
             gap: 15px;
+            margin:auto;
             width: 150px;
             height: 150px;
-            border-radius:600px;
+            border-radius: 600px;
             border: 5px solid linear-gradient(to right, #f2f0f0,  #0713ef); /* border color of the image */
             position: absolute; /* positions the image relative to its parent */
             left: 100%; /* positions the image to the right of the image container */
             animation: scrollingleft 11s infinite linear; /* makes the image scroll to the left */
-            animation-delay: 15s;
+            animation-delay: 12s;
             /* animation: scrollingleft;
             animation-duration: 2s;
             animation-iteration-count: infinite;
@@ -231,7 +239,7 @@ p.username:hover {
 }
 img:hover {
     transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.2);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
 }
 
@@ -277,4 +285,43 @@ img:hover {
 }
 .pic11 {
     animation-delay: 11s; /*calc(30s / 8 * (8 - 11) * -1);*/
+}
+button {
+    content:" ";
+    border-radius: 60px;
+    border: none;
+    color: #fafaff;
+    overflow: hidden;
+    background: linear-gradient(to right, #a4ff06, #491ae4);
+    /*box-shadow: 0px 1px 15px black; /* left/right , up down, thickness*/
+    height: 60px;
+    width: 90px;
+    position: relative;
+    z-index: 0;
+
+}
+button::after{
+    content:"Dont Click!";
+    
+    background: linear-gradient(to left,#491ae4,#a4ff06 );
+    overflow: hidden;
+    color:red;
+    height: 100%;
+    width: 0%;
+    border-radius: 60px;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    z-index: 1;
+    transition: 2s ease-in-out;
+}
+button:hover{
+    transform: scale(1.5);
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.2);
+    transition: 0.3s ease-in-out;
+}
+button:hover::after{
+    width: 100%;
+
 }
